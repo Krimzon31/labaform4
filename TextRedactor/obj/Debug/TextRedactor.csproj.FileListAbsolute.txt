@@ -1,0 +1,11 @@
+D:\Проекты C#\TextRedactor\TextRedactor\bin\Debug\TextRedactor.exe.config
+D:\Проекты C#\TextRedactor\TextRedactor\bin\Debug\TextRedactor.exe
+D:\Проекты C#\TextRedactor\TextRedactor\bin\Debug\TextRedactor.pdb
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.csproj.AssemblyReference.cache
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.csproj.SuggestedBindingRedirects.cache
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.Form1.resources
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.Properties.Resources.resources
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.csproj.GenerateResource.cache
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.csproj.CoreCompileInputs.cache
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.exe
+D:\Проекты C#\TextRedactor\TextRedactor\obj\Debug\TextRedactor.pdb
