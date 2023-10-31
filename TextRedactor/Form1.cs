@@ -20,26 +20,28 @@ namespace TextRedactor
 
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            if (openFileDialog1.FileName == String.Empty) return;
-            // Чтение текстового файла
-            try
-            {
-                var Читатель = new System.IO.StreamReader(
-                openFileDialog1.FileName, Encoding.GetEncoding(1251));
-                richTextBox1.Text = Читатель.ReadToEnd();
-                Читатель.Close();
-            }
-            catch (System.IO.FileNotFoundException Ситуация)
-            {
-                MessageBox.Show(Ситуация.Message + "\nНет такого файла",
-                         "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception Ситуация)
-            { // отчет о других ошибках
-                MessageBox.Show(Ситуация.Message,
-                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+                var fileContent = string.Empty;
+                var filePath = string.Empty;
+
+           
+                openFileDialog1.InitialDirectory = "d:\\";
+                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog1.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog1.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream, Encoding.GetEncoding(1251)))
+                    {
+                        richTextBox1.Text = reader.ReadToEnd();
+                    }
+                }
         }
 
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
